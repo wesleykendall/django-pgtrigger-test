@@ -7,24 +7,28 @@ toolkits:
     tools:
       - poetry
       - python==3.7
+      - libpq==14.4
 
   - name: _base-py38
     manager: conda
     tools:
       - poetry
       - python==3.8
+      - libpq==14.4
 
   - name: _base-py39
     manager: conda
     tools:
       - poetry
       - python==3.9
+      - libpq==14.4
 
   - name: _base-py310
     manager: conda
     tools:
       - poetry
       - python==3.10
+      - libpq==14.4
 
   - name: py39-django
     base: _base-py39
