@@ -1,0 +1,37 @@
+project:
+  name: django-pgtrigger
+
+toolkits:
+  - name: _base-py37
+    manager: conda
+    tools:
+      - poetry
+      - python==3.7
+
+  - name: _base-py38
+    manager: conda
+    tools:
+      - poetry
+      - python==3.8
+
+  - name: _base-py39
+    manager: conda
+    tools:
+      - poetry
+      - python==3.9
+
+  - name: _base-py310
+    manager: conda
+    tools:
+      - poetry
+      - python==3.10
+
+  - name: py39-django
+    base: _base-py39
+    manager: pip
+    file: pyproject.toml
+
+jobs:
+  - name: test-py39-django
+    cmd: pytest
+    toolkit: py39-django
